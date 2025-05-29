@@ -44,7 +44,7 @@ export async function GET() {
       primaryCategory: "games",
       tags: ["mini-app", "games", "monad", "mining"],
       tagline: "Mine Gold, Get Rich!",
-      ogTitle: `${frameName} - Blockchain Mining Game`,
+      ogTitle: `${frameName}`,
       ogDescription: "Join the Gold Rush on Monad! Mine gold, upgrade your tractor, and compete with other miners.",
       screenshotUrls: [
         `${appUrl}/images/screenshot1.png`,
