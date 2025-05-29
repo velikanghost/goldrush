@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Frijole&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root,
+[data-theme] {
+  background: oklch(var(--b2));
+}
+
+@layer components {
+  body {
+    min-height: 100vh;
+    font-family: "Raleway", sans-serif;
+    box-sizing: border-box;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    line-height: 1;
+  }
+
+  .btn {
+    @apply shadow-md;
+  }
+
+  .btn.btn-ghost {
+    @apply shadow-none;
+  }
+
+  .btn_primary {
+    background-color: #3d2c24;
+    color: #f3f0e5;
+    border: 1px solid #5c4f3a;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  .btn_primary:hover {
+    background-color: #2a1f1a;
+  }
+
+  .btn_primary__diabled {
+    background-color: grey;
+    color: #f3f0e5;
+    border: 1px solid grey;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+  }
+
+  .btn_secondary {
+    background-color: transparent;
+    color: #3d2c24;
+    border: 1px solid #3d2c24;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  .btn_secondary:hover {
+    background-color: #5c4f3a;
+    color: #f3f0e5;
+  }
+
+  .buy_btn {
+    background-color: #3d2c24;
+    color: #f3f0e5;
+    border: 1px solid #5c4f3a;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  .buy_btn:hover {
+    background-color: #2a1f1a;
+  }
+
+  .buy_btn__disabled {
+    background-color: grey;
+    color: #f3f0e5;
+    border: 1px solid grey;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  .transparent {
+    background: transparent;
+  }
+
+  .home_section {
+    background: url("https://res.cloudinary.com/dwz1rvu5m/image/upload/v1731423599/background_fgewog.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  .mine_section {
+    background: url("https://res.cloudinary.com/dwz1rvu5m/image/upload/v1733235449/mine_bakg_k2hc4a.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .custom_progress div {
+    background-color: #42b72a !important;
+  }
+}
+
+@keyframes tossCoin {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  30% {
+    transform: translate(100px, -150px) scale(1.2);
+  }
+  100% {
+    transform: translate(300px, -500px) scale(0.5);
+    opacity: 0;
+  }
+}
+
+.toss {
+  animation: tossCoin 1s ease-out forwards;
+  will-change: transform, opacity;
+  opacity: 1;
+  position: absolute;
+}
